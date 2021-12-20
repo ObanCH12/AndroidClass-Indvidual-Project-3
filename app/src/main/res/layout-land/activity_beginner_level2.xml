@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grass_backdrop"
+    tools:context=".BeginnerLevel2">
+
+
+    <com.example.individualproject3.GameView
+        android:id="@+id/cc"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/wood_bg" />
+
+    <ImageView
+        android:id="@+id/ball"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="35dp"
+        android:src="@drawable/furryball"
+        app:layout_constraintLeft_toLeftOf="@id/cc"
+        app:layout_constraintBottom_toBottomOf="@id/cc"/>
+
+    <LinearLayout
+        android:id="@+id/arrows"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:id="@+id/leftArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:background="@drawable/leftarrow"
+            android:contentDescription="up"
+            />
+        <Button
+            android:id="@+id/rightArrow"
+            android:layout_width="wrap_content"
+            android:padding="12dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/rightarrow"
+            android:contentDescription="up"
+            />
+        <Button
+            android:id="@+id/upArrow"
+            android:layout_width="wrap_content"
+            android:padding="12dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/uparrow"
+            android:contentDescription="up"
+            />
+        <Button
+            android:id="@+id/downArrow"
+            android:layout_width="wrap_content"
+            android:padding="12dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/downarrow"
+            android:contentDescription="up"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        app:layout_constraintRight_toLeftOf="@id/arrows"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginRight="10dp">
+
+        <Button
+            android:id="@+id/btn_input1"
+            android:layout_width="wrap_content"
+            android:padding="12dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="    " />
+
+        <Button
+            android:id="@+id/btn_input2"
+            android:layout_width="wrap_content"
+            android:padding="12dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="    " />
+
+        <Button
+            android:id="@+id/btn_input3"
+            android:layout_width="wrap_content"
+            android:padding="12dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="    " />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        app:layout_constraintRight_toLeftOf="@id/arrows"
+        android:layout_marginRight="100dp">
+
+        <Button
+            android:id="@+id/btn_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/play"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
